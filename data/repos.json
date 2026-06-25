@@ -1,0 +1,292 @@
+[
+ {
+  "name": "k-dense-ai/scientific-agent-skills",
+  "label": "scientific-agent-skills",
+  "stars": 29316,
+  "typ": "Skill库",
+  "stages": [
+   "综合"
+  ],
+  "one": "#1 Agent Skills 库,把任意 agent 变 AI Scientist",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "yuan1z0825/nature-skills",
+  "label": "nature-skills",
+  "stars": 23238,
+  "typ": "写作Skill",
+  "stages": [
+   "写作"
+  ],
+  "one": "Nature 系写作 + 配图",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "sakanaai/ai-scientist",
+  "label": "ai-scientist",
+  "stars": 14086,
+  "typ": "自动科研",
+  "stages": [
+   "实验"
+  ],
+  "one": "全自动开放式科研标杆",
+  "push": "2025-12",
+  "seed": false
+ },
+ {
+  "name": "microsoft/skillopt",
+  "label": "skillopt",
+  "stars": 9260,
+  "typ": "Skill进化",
+  "stages": [
+   "综合"
+  ],
+  "one": "把 skill 当可进化状态",
+  "push": "2026-06",
+  "seed": true
+ },
+ {
+  "name": "sakanaai/ai-scientist-v2",
+  "label": "ai-scientist-v2",
+  "stars": 6680,
+  "typ": "自动科研",
+  "stages": [
+   "实验"
+  ],
+  "one": "Workshop 级自动科学发现 v2",
+  "push": "2025-12",
+  "seed": false
+ },
+ {
+  "name": "dwzhu-pku/paperbanana",
+  "label": "paperbanana",
+  "stars": 6623,
+  "typ": "配图",
+  "stages": [
+   "写作"
+  ],
+  "one": "学术配图自动化",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "samuelschmidgall/agentlaboratory",
+  "label": "agentlaboratory",
+  "stars": 5708,
+  "typ": "自主科研",
+  "stages": [
+   "综合"
+  ],
+  "one": "端到端自主科研工作流",
+  "push": "2025-08",
+  "seed": false
+ },
+ {
+  "name": "ruc-datalab/deepanalyze",
+  "label": "deepanalyze",
+  "stars": 4279,
+  "typ": "数据科学",
+  "stages": [
+   "实验"
+  ],
+  "one": "首个自主数据科学 agentic LLM",
+  "push": "2026-04",
+  "seed": false
+ },
+ {
+  "name": "evoscientist/evoscientist",
+  "label": "evoscientist",
+  "stars": 3785,
+  "typ": "Harness",
+  "stages": [
+   "综合"
+  ],
+  "one": "Harness + 自进化 AI Scientist",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "wubing2023/paperspine",
+  "label": "paperspine",
+  "stars": 3511,
+  "typ": "写作Skill",
+  "stages": [
+   "写作"
+  ],
+  "one": "论文 spine 写作系统",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "hkustdial/supervisor-skills",
+  "label": "supervisor-skills",
+  "stars": 3227,
+  "typ": "科研Skill",
+  "stages": [
+   "想法",
+   "写作"
+  ],
+  "one": "博导经验 skill · 选题评估",
+  "push": "2026-06",
+  "seed": true
+ },
+ {
+  "name": "openags/paper-search-mcp",
+  "label": "paper-search-mcp",
+  "stars": 1957,
+  "typ": "检索",
+  "stages": [
+   "想法"
+  ],
+  "one": "论文检索 MCP / Skills",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "mims-harvard/tooluniverse",
+  "label": "tooluniverse",
+  "stars": 1510,
+  "typ": "工具",
+  "stages": [
+   "实验"
+  ],
+  "one": "工具宇宙民主化 AI scientist",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "openraiser/nanoresearch",
+  "label": "nanoresearch",
+  "stars": 1506,
+  "typ": "助手",
+  "stages": [
+   "实验",
+   "想法"
+  ],
+  "one": "Autonomous AI Research Assistant",
+  "push": "2026-05",
+  "seed": false
+ },
+ {
+  "name": "opennswm-lab/faros",
+  "label": "faros",
+  "stars": 1168,
+  "typ": "编排",
+  "stages": [
+   "综合"
+  ],
+  "one": "blueprint-driven AutoResearch runtime",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "ruc-nlpir/arbor",
+  "label": "arbor",
+  "stars": 746,
+  "typ": "Harness",
+  "stages": [
+   "综合"
+  ],
+  "one": "自主优化框架 · insight 向上传播",
+  "push": "2026-06",
+  "seed": true
+ },
+ {
+  "name": "rss3208/visiomaster",
+  "label": "visiomaster",
+  "stars": 597,
+  "typ": "图→矢量",
+  "stages": [
+   "写作"
+  ],
+  "one": "论文图片转可编辑矢量",
+  "push": "2026-05",
+  "seed": false
+ },
+ {
+  "name": "future-house/robin",
+  "label": "robin",
+  "stars": 585,
+  "typ": "多agent",
+  "stages": [
+   "实验"
+  ],
+  "one": "多 agent 自动科学发现",
+  "push": "2026-04",
+  "seed": false
+ },
+ {
+  "name": "allenai/codescientist",
+  "label": "codescientist",
+  "stars": 346,
+  "typ": "代码实验",
+  "stages": [
+   "实验"
+  ],
+  "one": "代码实验自动发现 · Allen AI",
+  "push": "2026-03",
+  "seed": false
+ },
+ {
+  "name": "boom5426/nature-paper-skills",
+  "label": "nature-paper-skills",
+  "stars": 327,
+  "typ": "写作Skill",
+  "stages": [
+   "写作"
+  ],
+  "one": "论文返修 / 审计写作",
+  "push": "2026-05",
+  "seed": false
+ },
+ {
+  "name": "allenai/discoveryworld",
+  "label": "discoveryworld",
+  "stars": 217,
+  "typ": "评测",
+  "stages": [
+   "实验"
+  ],
+  "one": "自动发现评测环境",
+  "push": "2025-03",
+  "seed": false
+ },
+ {
+  "name": "yenanjing/awesome-ai-for-science",
+  "label": "awesome-ai-for-science",
+  "stars": 4,
+  "typ": "List",
+  "stages": [
+   "想法"
+  ],
+  "one": "awesome AI for science 列表",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "fulab-zhaosun/auto-research-landscape-2026",
+  "label": "auto-research-landscape-2026",
+  "stars": 1,
+  "typ": "Survey",
+  "stages": [
+   "想法"
+  ],
+  "one": "自动科研 landscape 综述",
+  "push": "2026-06",
+  "seed": false
+ },
+ {
+  "name": "xrb936/academic-research-skills-claude",
+  "label": "academic-research-skills-claude",
+  "stars": 1,
+  "typ": "科研Skill",
+  "stages": [
+   "综合"
+  ],
+  "one": "整套科研 skill 全流程编排",
+  "push": "2026-05",
+  "seed": false
+ }
+]

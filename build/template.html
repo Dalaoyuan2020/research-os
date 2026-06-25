@@ -1,0 +1,170 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research OS · 学术 Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070a12;--ink:#eaf0fb;--mut:#8b97ab;--card:#0e1422;--line:#1c2536;--a1:#5b8cff;--a2:#9b6bff;--a3:#28d5c8;
+ --fd:'Manrope','PingFang SC',sans-serif;--fb:'Inter','PingFang SC',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:-2;transform:translateZ(0);will-change:transform;background:
+ radial-gradient(56vw 46vh at 76% 8%,rgba(91,140,255,.16),transparent 60%),
+ radial-gradient(46vw 38vh at 8% 26%,rgba(155,107,255,.14),transparent 60%),
+ radial-gradient(40vw 38vh at 50% 96%,rgba(40,213,200,.10),transparent 60%),var(--bg)}
+.bg:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(70vw 70vh at 50% 18%,#000,transparent 80%)}
+.w{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,.disp,.nm,.lnm,.ln,.tab,.stats .b,.ct{font-family:var(--fd)}
+/* HERO */
+.hero{position:relative;padding:30px 0 6px}
+.hgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:center;min-height:520px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#cfe0ff;background:rgba(91,140,255,.12);border:1px solid rgba(91,140,255,.3);padding:6px 13px;border-radius:30px}
+.badge .d{width:7px;height:7px;border-radius:50%;background:var(--a3);box-shadow:0 0 10px var(--a3);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.4}}
+h1.title{font-size:clamp(46px,7.2vw,90px);line-height:.96;margin:16px 0 6px;font-weight:700;letter-spacing:-1.5px}
+.title .g{background:linear-gradient(110deg,#6c9bff,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:16.5px;color:#aab6c8;line-height:1.7;max-width:460px;margin:10px 0 20px}
+.stats{display:flex;gap:26px}
+.stats .b{font-size:30px;font-weight:700;color:#fff}.stats .s{font-size:12px;color:var(--mut);display:block;margin-top:2px}
+.hero-r{position:relative;height:520px}#orb{width:100%;height:100%;display:block;touch-action:none}
+.orbhint{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);font-size:11px;color:#56627a;pointer-events:none}
+/* GUIDE */
+.guide{position:sticky;top:0;z-index:20;background:rgba(9,12,21,.97);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:6px}
+.guidein{display:flex;gap:9px;align-items:center;padding:11px 0;flex-wrap:wrap}
+.glabel{font-size:12.5px;color:var(--mut);margin-right:4px}
+.pill{font-family:var(--fb);font-size:13px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);border-radius:30px;padding:7px 14px;cursor:pointer;transition:.16s;display:inline-flex;align-items:center}
+.pill i{width:8px;height:8px;border-radius:50%;margin-right:7px;box-shadow:0 0 6px currentColor}
+.pill:hover{border-color:#3a4965;color:#fff}
+.pill.on{background:rgba(255,255,255,.08);border-color:#46557a;color:#fff}
+/* SECTION */
+.h2{font-size:25px;font-weight:700;margin:42px 0 4px;display:flex;align-items:center}.h2::before{content:"";width:24px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--a1),var(--a3));margin-right:13px;flex:none}.h2 .g{background:linear-gradient(110deg,var(--a1),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2s{font-size:13px;color:var(--mut);margin-bottom:14px}
+.creed{background:linear-gradient(110deg,rgba(155,107,255,.1),rgba(40,213,200,.05));border:1px solid var(--line);border-left:3px solid var(--a2);border-radius:14px;padding:14px 18px;margin:20px 0;font-size:13.5px;line-height:1.7;color:#c8d3e6}.creed b{color:#fff}
+.tabs{display:flex;gap:8px;align-items:center;margin:6px 0 12px}
+.tab{font-size:15px;font-weight:700;border:0;background:none;cursor:pointer;color:var(--mut);padding:8px 6px;border-bottom:2px solid transparent;transition:.15s}.tab.on{color:#fff;border-bottom-color:var(--a1)}
+.cnt{font-size:12px;color:var(--mut);margin-left:auto}
+.board{display:flex;flex-direction:column;gap:8px}
+.more{display:block;margin:14px auto 0;font-family:var(--fb);font-size:13.5px;color:#cfe0ff;background:rgba(108,155,255,.08);border:1px solid rgba(108,155,255,.3);border-radius:30px;padding:10px 24px;cursor:pointer;transition:.16s}.more:hover{background:rgba(108,155,255,.16);border-color:rgba(108,155,255,.55)}
+.row{display:grid;grid-template-columns:40px 1fr 128px 1.05fr 22px;gap:14px;align-items:center;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 16px;transition:border-color .16s,transform .16s,box-shadow .16s;content-visibility:auto}
+.row:hover{border-color:rgba(91,140,255,.5);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.rk{font-family:var(--fd);font-size:18px;font-weight:700;color:#33415a;text-align:center}.row:hover .rk{color:var(--a1)}
+.nm{font-weight:700;font-size:14.5px;color:#fff}
+.seed{font-size:9px;color:#0a0e16;background:#9fb0c8;border-radius:4px;padding:1px 5px;margin-left:7px;font-family:var(--fb);font-weight:700;vertical-align:1px}
+.meta{margin-top:4px}.tp{font-size:10px;color:#aeb9c9;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:5px;padding:1px 7px}
+.sg{font-size:10px;border:1px solid;border-radius:5px;padding:1px 7px;margin-left:4px;font-weight:600}
+.st{font-size:14px;color:#ffd98a;font-weight:700;font-family:var(--fd);font-variant-numeric:tabular-nums;letter-spacing:.2px}
+.sstar{filter:drop-shadow(0 0 5px rgba(255,217,138,.55))}.snum{color:#ffe6a8}
+.hb{height:3px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;margin-top:6px}
+.hb span{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,rgba(91,140,255,.55),rgba(155,107,255,.7))}
+.one{font-size:13px;color:#9fb0c8;line-height:1.5}.go{font-size:15px;color:#33415a;text-align:center}.row:hover .go{color:var(--a3)}
+/* 过渡: 榜单→系统 */
+.bridge{margin:40px 0 0;text-align:center}.bridge .line{width:1px;height:34px;margin:0 auto;background:linear-gradient(var(--line),transparent)}
+.bridge .t{font-size:13px;color:var(--mut)}.bridge b{color:#cfe0ff}
+.lay{display:grid;grid-template-columns:168px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin:9px 0;transition:.16s}
+.lay:hover{border-color:var(--lc)}
+.lh{padding:14px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,color-mix(in srgb,var(--lc) 26%,transparent),transparent)}
+.ln{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--lc)}.lnm{font-size:15.5px;font-weight:700;margin-top:3px;color:#fff}
+.lb{padding:12px;display:flex;gap:7px;flex-wrap:wrap;align-content:center}
+.pl{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:12.5px;color:#c8d3e6}
+/* 案例 */
+.case{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr 28px 1fr;gap:0;align-items:stretch;margin:8px 0}
+.cstep{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 15px;text-align:center}
+.cic{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:var(--cc);background:color-mix(in srgb,var(--cc) 14%,transparent);border:1px solid color-mix(in srgb,var(--cc) 40%,transparent)}.cic svg{width:22px;height:22px}
+.ct{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}.cd{font-size:12.5px;color:#9fb0c8;line-height:1.5}
+.carrow{display:flex;align-items:center;justify-content:center;color:#3a4965;font-size:18px}
+.foot{border-top:1px solid var(--line);margin-top:38px;padding:22px 0;text-align:center;color:var(--mut);font-size:12px;line-height:1.8}.foot b{color:#cfe0ff}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}.hero-r{height:330px;order:-1}.row{grid-template-columns:28px 1fr 22px}.sw,.one{grid-column:2}.lay,.case{grid-template-columns:1fr}.carrow{display:none}.cstep{margin:6px 0}}
+</style></head><body>
+<div class="bg"></div>
+<header class="hero"><div class="w"><div class="hgrid">
+ <div class="hero-l">
+  <span class="badge"><span class="d"></span>学术 AI 工具 · 每天更新</span>
+  <h1 class="title">Research <span class="g">OS</span></h1>
+  <p class="lead">发现好用的学术 AI 工具和 Skill。按研究阶段挑,每天从 GitHub 自动收录。</p>
+  <div class="stats">
+   <div><span class="b" data-count="__NREPO__">0</span><span class="s">收录仓库</span></div>
+   <div><span class="b"><span data-count="__TOTK__">0</span>k+</span><span class="s">总 ★ 影响力</span></div>
+   <div><span class="b">5</span><span class="s">层科研系统</span></div>
+  </div>
+ </div>
+ <div class="hero-r"><canvas id="orb"></canvas><span class="orbhint">拖动旋转 · 点击节点跳转</span></div>
+</div></div></header>
+<nav class="guide"><div class="w"><div class="guidein"><span class="glabel">按研究阶段找 →</span>__PILLS__</div></div></nav>
+<main class="w">
+ <div class="creed">与其重复造轮子,不如先看清别人怎么做。我们每天扫一遍 GitHub,把真正值得用的学术 AI 工具挑出来、按研究阶段分好。</div>
+ <div class="tabs"><button class="tab on" data-sort="stars">热榜</button><button class="tab" data-sort="push">新榜</button><span class="cnt" id="cnt"></span></div>
+ <div class="board" id="board">__ROWS__</div>
+ <button id="more" class="more" style="display:none"></button>
+ <div class="bridge"><div class="line"></div><div class="t">上面是别人的工具 · 下面是我们把它们<b>串成的一套系统</b></div></div>
+ <h2 class="h2">我们的系统 · <span class="g">五层科研流水线</span></h2>
+ <div class="h2s">读 → 沉淀 → 写 → 验证 → 管理,也是上面 4 个阶段背后的系统</div>
+ __LAYERS__
+ <h2 class="h2">一个例子 · <span class="g">从想法到一篇论文</span></h2>
+ <div class="h2s">用各种 skill 收集想法 → 编排这些 skill → 达到预想的效果</div>
+ __CASE__
+</main>
+<footer class="foot"><div class="w">Research OS · 学术 AI 工具推荐<br>每天从 GitHub 自动收录 · Dalaoyuan2020 · 2026</div></footer>
+<script type="module">
+import gsap from "https://esm.sh/gsap@3.12.5";
+import { ScrollTrigger } from "https://esm.sh/gsap@3.12.5/ScrollTrigger";
+const SHOT=location.search.indexOf('shot')>=0;
+/* ===== Skill 环绕球(真实 stars=大小 · 阶段=颜色 · 状态=描边 · 点击=跳转) ===== */
+(function(){
+ const cv=document.getElementById('orb');if(!cv)return;const ctx=cv.getContext('2d',{alpha:true});
+ const NODES=__NODES__;const ms=Math.max.apply(null,NODES.map(n=>n.s));
+ function nrad(s){return 2.4+7*Math.log10(s+1)/Math.log10(ms+1);}
+ NODES.forEach(n=>{n.r0=nrad(n.s);n.rgb=hex2rgb(n.c);});
+ function hex2rgb(h){return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)].join(',');}
+ let W,H,R,cx,cy,dpr;
+ function size(){dpr=Math.min(1.6,window.devicePixelRatio||1);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);cx=W/2;cy=H/2;R=Math.min(W,H)*0.47;}
+ size();window.addEventListener('resize',size);
+ const N=NODES.length;NODES.forEach((n,i)=>{const phi=Math.acos(1-2*(i+.5)/N);const th=Math.PI*(1+Math.sqrt(5))*(i+.5);n.x=Math.sin(phi)*Math.cos(th);n.y=Math.sin(phi)*Math.sin(th);n.z=Math.cos(phi);});
+ let ang=0,angX=0.28,t0=0,vAng=0,vX=0,drag=false,px=0,py=0,moved=0,hover=null,pts=[],vis=true,run=true;
+ function frame(t){if(!run){t0=t;requestAnimationFrame(frame);return;}
+  const dt=t0?Math.min((t-t0)/1000,.05):0;t0=t;
+  if(!drag){ang+=dt*0.15;ang+=vAng;angX+=vX;vAng*=0.93;vX*=0.93;}angX=Math.max(-1.05,Math.min(1.05,angX));
+  ctx.clearRect(0,0,W,H);
+  const ca=Math.cos(ang),sa=Math.sin(ang),cX=Math.cos(angX),sX=Math.sin(angX);
+  pts=NODES.map(n=>{let x=n.x*ca-n.z*sa,z=n.x*sa+n.z*ca,y=n.y;let y2=y*cX-z*sX,z2=y*sX+z*cX;const sc=2.6/(2.6-z2);return{n,sx:cx+x*R*sc,sy:cy+y2*R*sc,sc,z:z2,rad:n.r0*sc};});
+  pts.sort((a,b)=>a.z-b.z);
+  ctx.lineWidth=.6;pts.forEach(p=>{const a=(p.z+1)/2;ctx.strokeStyle='rgba(91,140,255,'+(0.04+a*0.11)+')';ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(p.sx,p.sy);ctx.stroke();});
+  const cg=ctx.createRadialGradient(cx,cy,0,cx,cy,34);cg.addColorStop(0,'rgba(167,139,250,.9)');cg.addColorStop(.5,'rgba(108,155,255,.4)');cg.addColorStop(1,'rgba(108,155,255,0)');ctx.fillStyle=cg;ctx.beginPath();ctx.arc(cx,cy,34,0,7);ctx.fill();
+  ctx.fillStyle='#fff';ctx.font='700 13px '+getComputedStyle(document.body).getPropertyValue('--fd');ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('OS',cx,cy);
+  const big=NODES.slice().sort((a,b)=>b.s-a.s).slice(0,6);
+  pts.forEach(p=>{const a=(p.z+1)/2;const isBig=big.indexOf(p.n)>=0;let rad=p.rad+(hover===p.n?2:0);
+   if(isBig){ctx.shadowBlur=12;ctx.shadowColor='rgba('+p.n.rgb+','+(0.45+a*0.4)+')';}
+   ctx.fillStyle='rgba('+p.n.rgb+','+(0.42+a*0.55)+')';ctx.beginPath();ctx.arc(p.sx,p.sy,rad,0,7);ctx.fill();ctx.shadowBlur=0;
+   if(isBig||a>.6||hover===p.n){ctx.fillStyle='rgba(234,240,251,'+(hover===p.n?1:0.22+a*0.7)+')';ctx.font=(isBig?'600 ':'400 ')+(9.5+(p.rad/p.sc-2.4)*0.6)+'px '+getComputedStyle(document.body).getPropertyValue('--fb');ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(p.n.t,p.sx+rad+4,p.sy);}
+  });
+  requestAnimationFrame(frame);}
+ requestAnimationFrame(frame);
+ // 仅在球可见时跑(省CPU,治卡顿)
+ if('IntersectionObserver' in window){new IntersectionObserver(es=>{run=es[0].isIntersecting;}).observe(cv);}
+ function hit(mx,my){let best=null,bd=1e9;pts.forEach(p=>{const d=Math.hypot(p.sx-mx,p.sy-my);if(d<p.rad+9&&d<bd){bd=d;best=p.n;}});return best;}
+ function pos(e){const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top];}
+ cv.addEventListener('pointerdown',e=>{drag=true;moved=0;[px,py]=pos(e);cv.setPointerCapture&&cv.setPointerCapture(e.pointerId);});
+ cv.addEventListener('pointermove',e=>{const[mx,my]=pos(e);if(drag){const dx=mx-px,dy=my-py;moved+=Math.abs(dx)+Math.abs(dy);ang+=dx*0.006;angX+=dy*0.006;vAng=dx*0.006;vX=dy*0.006;px=mx;py=my;}else{hover=hit(mx,my);cv.style.cursor=hover?'pointer':'grab';}});
+ window.addEventListener('pointerup',e=>{if(!drag)return;drag=false;if(moved<6){const[mx,my]=pos(e);const n=hit(mx,my);if(n&&n.u)window.open(n.u,'_blank');}});
+ cv.style.cursor='grab';
+})();
+/* ===== 原生滚动 + GSAP 揭示(已去 Lenis) ===== */
+gsap.registerPlugin(ScrollTrigger);
+if(!SHOT){
+ gsap.from('.hero-l .badge,.title,.lead,.stats',{y:24,opacity:0,duration:.8,stagger:.08,ease:'power3.out'});
+ document.querySelectorAll('[data-count]').forEach(el=>{const end=+el.dataset.count,o={v:0};gsap.to(o,{v:end,duration:1.5,ease:'power2.out',delay:.3,onUpdate:()=>el.textContent=Math.round(o.v)});});
+ gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{scrollTrigger:{trigger:el,start:'top 93%'},y:22,opacity:0,duration:.6,ease:'power2.out'}));
+}else{document.querySelectorAll('[data-count]').forEach(el=>el.textContent=el.dataset.count);}
+/* ===== 榜单 筛选/排序 + 分批加载(治卡顿:默认5,点更多+8) ===== */
+const board=document.getElementById('board'),rowsA=[].slice.call(board.children),moreBtn=document.getElementById('more');
+let sort='stars',stage='all',shown=SHOT?rowsA.length:5;
+function curList(){return rowsA.filter(r=>stage==='all'||r.dataset.stages.indexOf(stage)>=0).sort((a,b)=>sort==='stars'?(b.dataset.stars-a.dataset.stars):(a.dataset.push<b.dataset.push?1:-1));}
+function countStar(r){const el=r.querySelector('.st[data-star]');if(!el||el.dataset.done)return;el.dataset.done=1;const end=+el.dataset.star,num=el.querySelector('.snum');if(SHOT||!window.gsap){num.textContent=end.toLocaleString();return;}const o={v:0};gsap.to(o,{v:end,duration:.9,ease:'power2.out',onUpdate:()=>num.textContent=Math.round(o.v).toLocaleString()});}
+function render(from){const v=curList();rowsA.forEach(r=>r.style.display='none');const show=v.slice(0,shown);
+ show.forEach((r,i)=>{r.style.display='';r.querySelector('.rk').textContent=i+1;board.appendChild(r);countStar(r);});
+ if(from!=null&&window.gsap)gsap.from(show.slice(from),{y:14,opacity:0,duration:.4,stagger:.05,ease:'power2.out'});
+ document.getElementById('cnt').textContent=v.length+' 个'+(stage==='all'?'':' · '+stage);
+ moreBtn.style.display=v.length>shown?'':'none';moreBtn.textContent='展开更多（还有 '+Math.max(0,v.length-shown)+' 个）';}
+moreBtn.onclick=()=>{const b=shown;shown+=8;render(b);};
+document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));p.classList.add('on');stage=p.dataset.stage;shown=5;render();});
+document.querySelectorAll('.tab').forEach(tb=>tb.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));tb.classList.add('on');sort=tb.dataset.sort;shown=5;render();});
+render();
+</script></body></html>

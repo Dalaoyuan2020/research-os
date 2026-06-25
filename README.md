@@ -1,30 +1,69 @@
-# Research OS · Vibe Researching
+# Research OS · 学术 AI 工具 Hub
 
-> Agentic AI 时代的科研 —— 把自己的科研方法与写作习惯"蒸馏"给一个懂我的 Agent，让它帮我读文献、写论文、跑科研闭环。
-> **一个人走太慢。这里公开我们的系统与正在吸收的项目，找同频的伙伴一起搭真正属于我们自己的学术助手。**
+一个学术版的 GitHub —— 把每天最值得用的**学术 AI 工具与 Agent Skill** 挑出来、按研究阶段分好,帮你快速找到它们,学清楚细节、提取核心。
 
-📄 **打开 `index.html` 看完整面板**（理念 + 五层系统 + 学术 AI 热榜）。
+**🌐 在线访问:** https://dalaoyuan2020.github.io/research-os/
 
-## 💡 理念：工具只是工具
-同样学 Claude Code，只用它"解决眼前问题"进步有限；真正的提升，是把它当成 **「资源语言编程」**——用它快速读懂 GitHub 上最好的工程、吸收别人的创新点、转化成自己的能力，**持续自我增强**。
+---
 
-## 🧱 我们的系统 · Research OS 五层
-读 → 沉淀 → 写 → 验证 → 管理，把零散 Skill 焊成一条科研流水线。
+## 这个 Hub 是干什么的
 
-| 层 | 角色 | 能力 |
-|---|---|---|
-| **L1 文件阅读层** | 读进来·结构化·速读 | paper-search · lit-analysis · doc-segment · litbase |
-| **L2 知识库层** | 跨文献沉淀 | academic-evolve · Napoleon Wiki · gitmind |
-| **L3 文献写作层** | 写好改好 | paper-git · review-board · reviewer · 强模板 · 引用/去AI味/配图 |
-| **L4 自动科研层** | 想法→实验→算法 | Harness Engineering · Loop Engineering · 学术仓库自循环 |
-| **L5 项目管理层** | 总控·交接·路由 | pipeline-board · paper_workbench · dogwind-handover |
+GitHub 上每天都冒出新的学术 AI 工具(自动写论文、自动跑实验、科研 Agent、写作 Skill……),好东西散落各处,很难一眼找到。
+Research OS 做一件事:**替你收口** —— 每天扫一遍 GitHub,把真正值得用的挑出来,按你的**研究阶段**(找想法 / 做实验 / 写论文 / 综合)分类,做成一个可读、可筛、可跳转的热榜,中转到各自的仓库。
 
-## 🔥 学术 AI 项目热榜（我们在吸收的）
-按影响力排序、**持续更新**的同领域项目聚合（AI Scientist / 自动科研 / 学术 Skill 包）。
-发现引擎：`peers/discover.sh`（关键词 + `gh search` + 去重），新仓库自动入榜。
+你可以在这里:
+- 按研究阶段快速找到对口的工具
+- 看「热榜 / 新榜」追最火、最新的项目
+- 拖动首页的 **Skill 星球**,点节点直达对应仓库
+- 顺着我们的**五层科研系统**,看这些工具能怎么串成一条流水线
 
-## 🗺️ 路线
-📚 文献管理 → ✍️ 写作助手 → 🤖 Auto Science（自动科研闭环）
+## 理念
 
-## 🤝 一起搭
-欢迎同频的学生/研究者。Issue / PR / 讨论都行——我们想让 Agent 不只是工具，而是能当我们"导师"的科研伙伴。
+我是**吕志远**,河海大学在校学生。
+我的想法是:在 AI 时代,学一个 AI 工具,提升的不只是「会用这个工具」——更重要的是,它让我们**更高效地获取想法、与人交流、并不断把别人的好东西吸收进来、迭代进化**。
+工具会过时,但「会快速读懂别人最好的工程、转化成自己的能力」这件事不会。这个 Hub,就是把这套吸收的过程公开出来,也想找一些同频的伙伴一起做。
+
+## 结构(仓库 → 项目 → 网页)
+
+```
+research-os/
+├── index.html          ← 网页(GitHub Pages 直接服务)
+├── data/repos.json     ← 数据库:收录的工具(单一真源)
+├── build/
+│   ├── build.py        ← 构建器:读 data/repos.json → 生成 index.html
+│   └── template.html   ← 页面模板(样式/交互,锁定)
+├── manage.py           ← 管理端口:增量维护(给自动化操作员用)
+├── peers/discover.sh   ← 发现引擎:关键词扫 GitHub,挖同类新仓库
+└── README.md
+```
+
+## 怎么维护(管理端口,不推倒重建)
+
+日常维护交给一个自动化操作员(OpenClaw / Harness 这类 Agent),它**只走固定的规范端口**增量更新,不手改网页、不推倒重建:
+
+```bash
+python manage.py list                                  # 看当前收录
+python manage.py add-repo owner/name --stage 实验      # 增量加一个工具(自动取 stars/描述)
+python manage.py refresh                               # 刷新所有 stars
+python manage.py build                                 # 由数据库重建 index.html
+python manage.py publish "add: xxx"                    # 提交并上线
+```
+
+- **数据库** = `data/repos.json`。加新工具 = 往里加一条记录,从不手改 `index.html`。
+- 修改类操作需设置环境变量 `ROS_TOKEN`(操作确认门);真正的写权限由 GitHub 账号控制。
+- `阶段` 取值:`想法` / `实验` / `写作` / `综合`。
+
+## 本地预览 / 构建
+
+```bash
+python build/build.py      # 由 data/repos.json 重建 index.html
+# 然后用任意静态服务器打开 index.html(页面用到 CDN 模块,直接双开也基本可用)
+```
+
+## 一起做
+
+欢迎做学术的同学、研究者。发现了好用的工具/Skill,提个 Issue 或 PR 就行。
+
+## License
+
+[MIT](./LICENSE) · © 2026 吕志远 (Dalaoyuan2020)
