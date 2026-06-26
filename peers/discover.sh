@@ -1,6 +1,6 @@
 #!/bin/zsh
 # 学术仓库自循环 · 一轮发现引擎。用法: ./discover.sh  (需 gh 已登录)
-DIR="${0:A:h}"; SEEN="$DIR/seen.txt"; touch "$SEEN"
+DIR="${0:A:h}"; export SEEN="$DIR/seen.txt"; touch "$SEEN"
 TERMS=( "AI scientist" "autonomous research" "automated scientific discovery" "AI co-scientist"
         "automated paper writing" "AI survey generation" "scientific writing agent"
         "research agent" "agentic data science" "ML research agent" "self-driving lab"

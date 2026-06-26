@@ -11,7 +11,8 @@
   python manage.py add-repo <owner/name> --stage 想法|实验|写作|综合 [--type 类型] [--desc "一句话"]
   python manage.py refresh                       # 刷新所有 stars + push 时间
   python manage.py build                          # 由数据库重建 index.html
-  python manage.py publish "提交说明"             # git add + commit + push(更新线上)
+  python manage.py publish "提交说明"             # git add + commit + push(直推 main,仅限可信人)
+  python manage.py propose "提交说明"             # 开 PR(龙虾默认走这个,不直推 main,待人工合并)
 
 安全:修改类操作(add-repo / refresh / publish)需设置非空环境变量 ROS_TOKEN 作为操作确认门;
 真正的写权限由 GitHub 账号(gh auth)控制。
@@ -67,6 +68,21 @@ def cmd_publish(a):
     subprocess.run(["git", "-C", HERE, "push"], check=True)
     print("✅ 已发布,GitHub Pages 几分钟后更新")
 
+def cmd_propose(a):
+    """龙虾默认走这个:把改动开成 PR,不直推 main(保护线上面板,人工审核后合并)。"""
+    gate()
+    import datetime
+    br = "ros/update-" + datetime.datetime.now().strftime("%m%d-%H%M%S")
+    subprocess.run(["git", "-C", HERE, "checkout", "-b", br], check=True)
+    subprocess.run(["git", "-C", HERE, "add", "-A"], check=True)
+    subprocess.run(["git", "-C", HERE, "commit", "-m", a.msg], check=True)
+    subprocess.run(["git", "-C", HERE, "push", "-u", "origin", br], check=True)
+    r = gh(["pr", "create", "--base", "main", "--head", br, "--title", a.msg,
+            "--body", "🦞 龙虾自动巡更,待人工审核合并。不直接动 main,保护线上面板。"])
+    print(r.stdout.strip() or r.stderr.strip())
+    subprocess.run(["git", "-C", HERE, "checkout", "main"], check=True)
+    print("✅ 已开 PR(上面链接)。人工审核后合并:gh pr merge <PR号> --merge --delete-branch")
+
 def main():
     p = argparse.ArgumentParser(description="Research OS 管理端口")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -76,6 +92,7 @@ def main():
     sub.add_parser("refresh").set_defaults(fn=cmd_refresh)
     sub.add_parser("build").set_defaults(fn=cmd_build)
     pp = sub.add_parser("publish"); pp.add_argument("msg"); pp.set_defaults(fn=cmd_publish)
+    pr = sub.add_parser("propose"); pr.add_argument("msg"); pr.set_defaults(fn=cmd_propose)
     a = p.parse_args(); a.fn(a)
 
 if __name__ == "__main__":
