@@ -32,7 +32,7 @@ I thought about it for a long time. Maybe I just wasn't watching closely enough,
 
 Most people treat AI as a "solver": ask a question, take the answer, close the tab — the problem is solved, but the person stays the same. I do one extra thing every time: I read how the answer was actually reasoned out, pull out the one part worth keeping, and turn it into something I can use next time. After each problem I'm a little stronger than before — and that compounds.
 
-I came to call this **"Resource-Language Programming."** GitHub is the world's best open-source engineering library; in the agent era, *being able to read and absorb that engineering into your own capability is itself a form of programming.*
+I came to call this a **knowledge flywheel** (the meaning behind this project's logo). GitHub is the world's best open-source engineering library; in the agent era, how fast the flywheel spins comes down to whether you can read, absorb, and turn others' best engineering into your own capability.
 
 Research OS makes this **discover → absorb → internalize → self-strengthen** loop public — and looks for like-minded people to grow it together.
 
