@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024" height="1024"><rect width="100" height="100" fill="#0e1422"/><g transform="rotate(15 50.00 50.00) translate(53.120 54.320) scale(9.600)"><rect x="0.000" y="-3.400" width="1.400" height="3.400" rx="0.180" fill="#161e30" stroke="#e9edf6" stroke-width="0.15" stroke-linejoin="round"/>
+<line x1="0.280" y1="-2.890" x2="1.120" y2="-2.890" stroke="#5b6b86" stroke-width="0.15" stroke-linecap="round"/>
+<rect x="-2.900" y="-1.400" width="2.900" height="1.400" rx="0.180" fill="#161e30" stroke="#e9edf6" stroke-width="0.15" stroke-linejoin="round"/>
+<line x1="-2.465" y1="-1.120" x2="-2.465" y2="-0.280" stroke="#5b6b86" stroke-width="0.15" stroke-linecap="round"/>
+<rect x="-1.400" y="0.000" width="1.400" height="2.500" rx="0.180" fill="#161e30" stroke="#e9edf6" stroke-width="0.15" stroke-linejoin="round"/>
+<line x1="-1.120" y1="2.125" x2="-0.280" y2="2.125" stroke="#5b6b86" stroke-width="0.15" stroke-linecap="round"/>
+<rect x="0.000" y="0.000" width="2.250" height="1.400" rx="0.180" fill="#e0a94a" stroke="#e9edf6" stroke-width="0.15" stroke-linejoin="round"/>
+<line x1="1.912" y1="0.280" x2="1.912" y2="1.120" stroke="#9c7a2a" stroke-width="0.15" stroke-linecap="round"/></g></svg>
