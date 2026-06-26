@@ -288,5 +288,17 @@
   "one": "整套科研 skill 全流程编排",
   "push": "2026-05",
   "seed": false
+ },
+ {
+  "name": "yilewang/llm-for-zotero",
+  "label": "llm-for-zotero",
+  "stars": 2063,
+  "typ": "文献助手",
+  "stages": [
+   "想法"
+  ],
+  "one": "在你的 Zotero 文献库里做引用感知对话——把 LLM 锚定到个人文献库,边读边问、自动打标记笔记",
+  "push": "2026-06-23",
+  "seed": false
  }
 ]
