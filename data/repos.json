@@ -300,5 +300,17 @@
   "one": "在你的 Zotero 文献库里做引用感知对话——把 LLM 锚定到个人文献库,边读边问、自动打标记笔记",
   "push": "2026-06-23",
   "seed": false
+ },
+ {
+  "name": "tsinghua-fib-lab/AgentSociety",
+  "label": "AgentSociety",
+  "stars": 1086,
+  "typ": "一体化研究环境",
+  "stages": [
+   "综合"
+  ],
+  "one": "清华李勇·一体化社会科学研究环境(硅基被试+AI科学家双角色);亮点=带『盖章锁定·改了即拦重审』的 harness 门",
+  "push": "2026-06-27",
+  "seed": false
  }
 ]
