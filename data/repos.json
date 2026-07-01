@@ -2,73 +2,73 @@
  {
   "name": "k-dense-ai/scientific-agent-skills",
   "label": "scientific-agent-skills",
-  "stars": 29316,
+  "stars": 29725,
   "typ": "Skill库",
   "stages": [
    "综合"
   ],
   "one": "#1 Agent Skills 库,把任意 agent 变 AI Scientist",
-  "push": "2026-06",
+  "push": "2026-06-29",
   "seed": false
  },
  {
   "name": "yuan1z0825/nature-skills",
   "label": "nature-skills",
-  "stars": 23238,
+  "stars": 24976,
   "typ": "写作Skill",
   "stages": [
    "写作"
   ],
   "one": "Nature 系写作 + 配图",
-  "push": "2026-06",
+  "push": "2026-07-01",
   "seed": false
  },
  {
   "name": "sakanaai/ai-scientist",
   "label": "ai-scientist",
-  "stars": 14086,
+  "stars": 14128,
   "typ": "自动科研",
   "stages": [
    "实验"
   ],
   "one": "全自动开放式科研标杆",
-  "push": "2025-12",
+  "push": "2025-12-19",
   "seed": false
  },
  {
   "name": "microsoft/skillopt",
   "label": "skillopt",
-  "stars": 9260,
+  "stars": 10313,
   "typ": "Skill进化",
   "stages": [
    "综合"
   ],
   "one": "把 skill 当可进化状态",
-  "push": "2026-06",
+  "push": "2026-06-30",
   "seed": true
  },
  {
   "name": "sakanaai/ai-scientist-v2",
   "label": "ai-scientist-v2",
-  "stars": 6680,
+  "stars": 6740,
   "typ": "自动科研",
   "stages": [
    "实验"
   ],
   "one": "Workshop 级自动科学发现 v2",
-  "push": "2025-12",
+  "push": "2025-12-19",
   "seed": false
  },
  {
   "name": "dwzhu-pku/paperbanana",
   "label": "paperbanana",
-  "stars": 6623,
+  "stars": 6672,
   "typ": "配图",
   "stages": [
    "写作"
   ],
   "one": "学术配图自动化",
-  "push": "2026-06",
+  "push": "2026-06-25",
   "seed": false
  },
  {
@@ -86,50 +86,50 @@
  {
   "name": "ruc-datalab/deepanalyze",
   "label": "deepanalyze",
-  "stars": 4279,
+  "stars": 4299,
   "typ": "数据科学",
   "stages": [
    "实验"
   ],
   "one": "首个自主数据科学 agentic LLM",
-  "push": "2026-04",
+  "push": "2026-07-01",
   "seed": false
  },
  {
   "name": "evoscientist/evoscientist",
   "label": "evoscientist",
-  "stars": 3785,
+  "stars": 3954,
   "typ": "Harness",
   "stages": [
    "综合"
   ],
   "one": "Harness + 自进化 AI Scientist",
-  "push": "2026-06",
+  "push": "2026-07-01",
   "seed": false
  },
  {
   "name": "wubing2023/paperspine",
   "label": "paperspine",
-  "stars": 3511,
+  "stars": 3670,
   "typ": "写作Skill",
   "stages": [
    "写作"
   ],
   "one": "论文 spine 写作系统",
-  "push": "2026-06",
+  "push": "2026-07-01",
   "seed": false
  },
  {
   "name": "hkustdial/supervisor-skills",
   "label": "supervisor-skills",
-  "stars": 3227,
+  "stars": 3453,
   "typ": "科研Skill",
   "stages": [
    "想法",
    "写作"
   ],
   "one": "博导经验 skill · 选题评估",
-  "push": "2026-06",
+  "push": "2026-07-01",
   "seed": true
  },
  {
@@ -147,122 +147,122 @@
  {
   "name": "mims-harvard/tooluniverse",
   "label": "tooluniverse",
-  "stars": 1510,
+  "stars": 1522,
   "typ": "工具",
   "stages": [
    "实验"
   ],
   "one": "工具宇宙民主化 AI scientist",
-  "push": "2026-06",
+  "push": "2026-06-30",
   "seed": false
  },
  {
   "name": "openraiser/nanoresearch",
   "label": "nanoresearch",
-  "stars": 1506,
+  "stars": 1486,
   "typ": "助手",
   "stages": [
    "实验",
    "想法"
   ],
   "one": "Autonomous AI Research Assistant",
-  "push": "2026-05",
+  "push": "2026-05-26",
   "seed": false
  },
  {
   "name": "opennswm-lab/faros",
   "label": "faros",
-  "stars": 1168,
+  "stars": 1364,
   "typ": "编排",
   "stages": [
    "综合"
   ],
   "one": "blueprint-driven AutoResearch runtime",
-  "push": "2026-06",
+  "push": "2026-06-28",
   "seed": false
  },
  {
   "name": "ruc-nlpir/arbor",
   "label": "arbor",
-  "stars": 746,
+  "stars": 866,
   "typ": "Harness",
   "stages": [
    "综合"
   ],
   "one": "自主优化框架 · insight 向上传播",
-  "push": "2026-06",
+  "push": "2026-06-30",
   "seed": true
  },
  {
   "name": "rss3208/visiomaster",
   "label": "visiomaster",
-  "stars": 597,
+  "stars": 632,
   "typ": "图→矢量",
   "stages": [
    "写作"
   ],
   "one": "论文图片转可编辑矢量",
-  "push": "2026-05",
+  "push": "2026-05-29",
   "seed": false
  },
  {
   "name": "future-house/robin",
   "label": "robin",
-  "stars": 585,
+  "stars": 592,
   "typ": "多agent",
   "stages": [
    "实验"
   ],
   "one": "多 agent 自动科学发现",
-  "push": "2026-04",
+  "push": "2026-04-21",
   "seed": false
  },
  {
   "name": "allenai/codescientist",
   "label": "codescientist",
-  "stars": 346,
+  "stars": 345,
   "typ": "代码实验",
   "stages": [
    "实验"
   ],
   "one": "代码实验自动发现 · Allen AI",
-  "push": "2026-03",
+  "push": "2026-03-25",
   "seed": false
  },
  {
   "name": "boom5426/nature-paper-skills",
   "label": "nature-paper-skills",
-  "stars": 327,
+  "stars": 337,
   "typ": "写作Skill",
   "stages": [
    "写作"
   ],
   "one": "论文返修 / 审计写作",
-  "push": "2026-05",
+  "push": "2026-05-08",
   "seed": false
  },
  {
   "name": "allenai/discoveryworld",
   "label": "discoveryworld",
-  "stars": 217,
+  "stars": 218,
   "typ": "评测",
   "stages": [
    "实验"
   ],
   "one": "自动发现评测环境",
-  "push": "2025-03",
+  "push": "2025-03-10",
   "seed": false
  },
  {
   "name": "yenanjing/awesome-ai-for-science",
   "label": "awesome-ai-for-science",
-  "stars": 4,
+  "stars": 5,
   "typ": "List",
   "stages": [
    "想法"
   ],
   "one": "awesome AI for science 列表",
-  "push": "2026-06",
+  "push": "2026-07-01",
   "seed": false
  },
  {
@@ -274,7 +274,7 @@
    "想法"
   ],
   "one": "自动科研 landscape 综述",
-  "push": "2026-06",
+  "push": "2026-06-02",
   "seed": false
  },
  {
@@ -286,19 +286,43 @@
    "综合"
   ],
   "one": "整套科研 skill 全流程编排",
-  "push": "2026-05",
+  "push": "2026-05-10",
   "seed": false
  },
  {
   "name": "yilewang/llm-for-zotero",
   "label": "llm-for-zotero",
-  "stars": 2063,
+  "stars": 2129,
   "typ": "文献助手",
   "stages": [
    "想法"
   ],
   "one": "在你的 Zotero 文献库里做引用感知对话——把 LLM 锚定到个人文献库,边读边问、自动打标记笔记",
-  "push": "2026-06-23",
+  "push": "2026-07-01",
+  "seed": false
+ },
+ {
+  "name": "CMarsRover/SciAgentGYM",
+  "label": "SciAgentGYM",
+  "stars": 31,
+  "typ": "科学工具Agent环境/评测",
+  "stages": [
+   "实验"
+  ],
+  "one": "复旦NLP:多步科学工具使用的可交互执行环境+259任务benchmark。实测长程任务断崖(L1约47%→L3约16%),点破真瓶颈=能否读懂环境反馈,而非会不会调工具。",
+  "push": "2026-05-30",
+  "seed": false
+ },
+ {
+  "name": "JimLiu/science-skills",
+  "label": "science-skills",
+  "stars": 17,
+  "typ": "产品拆解/科研Skills合集",
+  "stages": [
+   "综合"
+  ],
+  "one": "Claude Science产品内部资产提取:基础系统提示词+29个skills+reviewer审查agent(抓编造/偏离)+MCP。把只能黑盒观察的旗舰产品变成可读源码的白盒",
+  "push": "2026-07-01",
   "seed": false
  }
 ]
